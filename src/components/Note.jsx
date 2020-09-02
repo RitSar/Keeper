@@ -1,4 +1,7 @@
 import React from "react";
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
+import Zoom from "@material-ui/core/Zoom";
+
 
 function Note(props) {
   function handleClick() {
@@ -6,11 +9,16 @@ function Note(props) {
   }
 
   return (
-    <div className="note">
+    <Zoom in={true}>
+<div className="note">
       <h1>{props.title}</h1>
       <p>{props.content}</p>
-      <button onClick={handleClick}>DELETE</button>
+      <button onClick={handleClick}>
+        <DeleteOutlineIcon />
+      </button>
     </div>
+    </Zoom>
+    
   );
 }
 
