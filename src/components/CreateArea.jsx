@@ -9,7 +9,7 @@ function CreateArea(props) {
   function handleChange(event) {
     const { name, value } = event.target;
 
-    setNote((prevNote) => {
+    setNote(prevNote => {
       return {
         ...prevNote,
         [name]: value
@@ -19,6 +19,10 @@ function CreateArea(props) {
 
   function submitNote(event) {
     props.onAdd(note);
+    setNote({
+      title: "",
+      content: ""
+    });
     event.preventDefault();
   }
 
@@ -27,15 +31,15 @@ function CreateArea(props) {
       <form>
         <input
           name="title"
-          placeholder="Title"
           onChange={handleChange}
           value={note.title}
+          placeholder="Title"
         />
         <textarea
           name="content"
-          placeholder="Take a note..."
           onChange={handleChange}
           value={note.content}
+          placeholder="Take a note..."
           rows="3"
         />
         <button onClick={submitNote}>Add</button>
