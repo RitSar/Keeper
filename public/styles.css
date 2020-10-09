@@ -9,7 +9,7 @@ html {
 }
 body {
   background: #eee;
-  background-image: url("https://www.transparenttextures.com/patterns/gplay.png"); 
+  background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
 }
 
 header {
@@ -60,6 +60,7 @@ footer p {
 .note button {
   position: relative;
   float: right;
+  left: 10px;
   margin-right: 10px;
   color: white;
   background-color: #f5ba13;
